@@ -3,7 +3,7 @@ class Ask
   def initialize(prompt_text, answer_map)
     raise ArgumentError "Prompt length must be > 0" unless prompt_text.length > 0
     raise ArgumentError "Answer map must be symbol -> resolvable" unless valid_answer_map?(answer_map)
-    @prompt_text = prompt_text
+    @prompt_text = "#{prompt_text} "
     @answer_map = answer_map
   end
 
